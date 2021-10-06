@@ -19,7 +19,7 @@ const app = Vue.createApp({
             this.cartListHeight = "0"; 
         },
     },
-    mounted () {
+    beforeMount () {
         var that = this;
         setInterval(function() {
             let min = parseInt(that.initTime / 60).toString().length === 1 ? "0" + parseInt(that.initTime / 60).toString() : parseInt(that.initTime / 60).toString();
