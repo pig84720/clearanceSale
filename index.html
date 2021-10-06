@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>清倉大拍賣</title>
+    <!-- Import Styles -->
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+    </style>
+    <!-- Import Vue.js -->
+    <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="nav-bar">
+        <div class="countdownText">{{ countdown }}</div>
+      </div>
+
+      <div class="cart" @mouseover="showCartList" @mouseout="hideCartList">
+        <img src="./assets/images/cart.png" class="cartimg">
+        <div class="cartcount">({{ cart.length }})</div>
+      </div>
+      <cart-list :cart="cart" :cartListHeight="cartListHeight"></cart-list>
+      <product-display :premium="premium" @add-to-cart="updateCart"></product-display>
+    </div>
+
+    <!-- Import App -->
+    <script src="./main.js"></script>
+
+    <!-- Import Components -->
+    <script src="./components/ProductDisplay.js"></script>
+    <script src="./components/ReviewForm.js"></script>
+    <script src="./components/ReviewList.js"></script>
+    <script src="./components/CartList.js"></script>
+
+    <!-- Mount App -->
+    <script>
+      const mountedApp = app.mount('#app')
+    </script>
+
+    <!-- JS Tools -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>
