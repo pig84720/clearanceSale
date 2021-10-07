@@ -224,6 +224,10 @@ ul {
   padding-left: 0;
 }
 
+[v-cloak] {
+  display: none;
+}
+
 @media only screen and (max-width: 600px) {
   .container {
     flex-direction: column;

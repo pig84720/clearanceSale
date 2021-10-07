@@ -14,12 +14,12 @@
   <body>
     <div id="app">
       <div class="nav-bar">
-        <div class="countdownText">{{ countdown }}</div>
+        <div class="countdownText" v-cloak>{{ countdown }}</div>
       </div>
 
       <div class="cart" @mouseover="showCartList" @mouseout="hideCartList">
         <img src="./assets/images/cart.png" class="cartimg">
-        <div class="cartcount">({{ cart.length }})</div>
+        <div class="cartcount" v-cloak>({{ cart.length }})</div>
       </div>
       <cart-list :cart="cart" :cartListHeight="cartListHeight"></cart-list>
       <product-display :premium="premium" @add-to-cart="updateCart"></product-display>
