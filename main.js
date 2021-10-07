@@ -4,7 +4,7 @@ const app = Vue.createApp({
             cart: [],
             premium: false,
             cartListHeight: "0",
-            countdown: '',
+            countdown: '優惠將在 01小時 " + "00分 " + "00秒後結束',
             initTime: 3599
         }
     },
@@ -19,8 +19,7 @@ const app = Vue.createApp({
             this.cartListHeight = "0"; 
         },
     },
-    beforeMount () {
-        this.countdown = "優惠將在 01小時 " + "00分 " + "00秒後結束"
+    beforeCreate () {
         var that = this;
         setInterval(function() {
             let min = parseInt(that.initTime / 60).toString().length === 1 ? "0" + parseInt(that.initTime / 60).toString() : parseInt(that.initTime / 60).toString();
