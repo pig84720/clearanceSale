@@ -4,7 +4,7 @@ const app = Vue.createApp({
             cart: [],
             premium: false,
             cartListHeight: "0",
-            countdown: '優惠將在 01小時 " + "00分 " + "00秒後結束',
+            countdown: '優惠將在 01小時 00分 00秒後結束',
             initTime: 3599
         }
     },
